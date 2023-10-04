@@ -1,0 +1,21 @@
+div {
+    font-size: 16px;
+    font-family: san-serif;
+}
+h1{
+    size: 36px;
+    text-align: center;
+    background-color: RGB(75,133,94);
+}
+#address{
+    text-align: center;
+    text-wrap: hard;
+}
+h2{
+    font-size: 24px;
+    color:RGB(33,87,51);
+}
+h3{
+    font-size: 20px;
+    color:RGB(33,87,51);
+}
