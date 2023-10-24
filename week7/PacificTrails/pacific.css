@@ -74,3 +74,25 @@ h3 {
     max-width: 2048px;
     box-shadow: 3px 3px 3px #777;
 }
+nav ul{
+    list-style-type: none;
+}
+nav a{
+    text-decoration: none;
+}
+nav li{
+    display: inline;
+    padding-right: 10px;
+}
+a:visited{
+    color:#002171
+}
+a:link{
+    color:#002171
+}
+a:hover{
+    color:red
+}
+a:hover{
+    background-color: beige;
+}
