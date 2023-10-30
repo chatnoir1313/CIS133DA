@@ -1,0 +1,87 @@
+body{
+    margin: 0px;
+    background-color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 15%, auto;
+    grid-template-rows: 10, auto, 10%;
+    grid-template-areas: "logo logo" "nav main" "ftr ftr";
+    align-content: stretch;
+}
+
+logo, nav, main, footer {
+    padding: 20px;
+    place-content: center;
+}
+
+logo{
+    display: flex;
+    grid-area: logo;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    background-color: rgba(174, 226, 174, 0.664);
+}
+
+nav{
+    clear: both;
+    font-size: larger;
+    grid-area: nav;
+    justify-items: center;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    background-color: rgb(174, 226, 174, 0.664);
+    height: 100vh;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav li{
+    padding-right: 30px;
+    list-style-type: none;
+    text-decoration: none;
+    display: inline;
+}
+
+a:visited{
+    color: rgb(3, 78, 3);
+}
+a:link{
+    color: rgb(3, 78, 3);
+    text-decoration: none;
+}
+
+a:hover{
+    color:red
+}
+
+main{
+    grid-area: main;
+    text-align: left;
+    font-size: large;
+    color: black;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+footer{
+    grid-area: ftr;
+    text-align: center;
+    color: black;
+}
+
+h1{
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
