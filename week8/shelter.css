@@ -7,6 +7,10 @@ body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 75px auto 50px;
+    grid-template-areas: "hdr hdr" "aside main" "ftr ftr";
 }
 
 header, aside, main, footer {
@@ -15,11 +19,16 @@ header, aside, main, footer {
 }
 
 header {
+    grid-area: hdr;
     color: white;
     background-color: blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 aside {
+    grid-area: aside;
     background-color: yellow;
 }
 
@@ -28,11 +37,17 @@ aside > img {
 }
 
 main {
+    grid-area: main;
 }
 
 footer {
+    grid-area: ftr;
     color: white;
     background-color: blue;
+    display: flex;
+    justify-content: space-around;
+    padding-right: .5em;
+	padding-bottom: .5em;
 }
 
 header, footer {
@@ -55,9 +70,40 @@ p {
     background-color: lightblue;
     height: 200px;
     width: 200px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .amigo_div > img {
     width: 180px;
     height: 180px;
+    margin: 10px;
+    flex-basis: auto;
+    box-sizing: border-box;
+    
+}
+
+.header_div{
+    padding: 80px;
+}
+
+main{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+main {
+    margin: 10px;
+    flex-basis: auto;
+    box-sizing: border-box;
+}
+
+.main-row img {
+    max-width: 100%; 
 }
