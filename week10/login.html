@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<tb>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            /* this will center items on the page, refer to the box-model */
+            margin: 0 auto; 
+            /* tell the page how big you want the form to be */
+            width: 210px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <tr> <td id="welcomeMessage" colspan="2"></td> </tr>
+            <tr>
+                <!-- "name" and "id" are used in this case for javascript to pull the code easier -->
+                <!-- autofocus will draw the mouse placement to this section automatically  -->
+                <td colspan="2"> <input type="text" name="UserName" id="txt_username" placeholder="Name" style="width: 200px;" autofocus tabindex="1" maxlength="32" required/> </td>
+            </tr>
+            <tr>
+                <td colspan="2"> <input type="password" name="PassWord" id="txt_username" placeholder="Password" style="width: 200px;" tabindex="2" maxlength="32" required/> </td> 
+            </tr>
+            <tr>
+                <td> <input type="reset" name="ResetButton" id="bttn_reset" "Reset" style="width: 100px;" tabindex="3"/> </td>
+                <td> <input type="submit" name="SubmitButton" id="bttn_submit" value="Submit" style="width: 100px;" tabindex="4" onclick="writeMessage()"/> </td>
+            </tr>
+        </table>
+    </form>
+    <form>
+        <!-- radio buttons need to have the same name for the code to only allow ONE option to be selected -->
+        <input type="radio" name="rbuttons" id="rButton_1" /> Option 1 <br>
+        <input type="radio" name="rbuttons" id="rButton_2" /> Option 2 <br>
+        <input type="radio" name="rbuttons" id="rButton_3" /> Option 3 <br>
+    </form>
+</body>
+<!-- sneak peak into JavaScript -->
+<!-- script is where programming language is inserted -->
+<script>
+    function writeMessage(){
+        let userName = document.getElementById("txt_username").value;
+        document.getElementById('welcomeMessage').innerText = userName;
+    }
+</script>
+</html>
