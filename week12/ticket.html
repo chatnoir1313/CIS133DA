@@ -63,4 +63,23 @@
         </amigoInfo>
     </ticket>
 </body>
+<!-- <scrpit> goes at the bottom so that it can call on the information above it -->
+<script>
+    let clientName = window.prompt('What is your amigo\'s name?')
+    let visitDate = window.prompt('What is the date of your visit?');
+
+// back tick ` allows the use of apostraphes to be used within 
+// Template Literal = `${}
+    document.title = `${clientName}'s Ticket to Animal Amigos`;
+
+    document.getElementById('ownerName').innerText = clientName;
+    document.getElementById('visitDate').innerHTML = visitDate;
+
+    function cancelTicket() {
+        if(window.confirm('Do you want to leave this page?')) {
+            window.close();
+        }
+    }
+</script>
+
 </html>
