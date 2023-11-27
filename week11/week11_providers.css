@@ -1,0 +1,15 @@
+body{
+    width: 700px;
+    margin: auto;
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#table_header{
+    background-color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
