@@ -48,7 +48,7 @@
         </table>
     </form>
 
-    <ticket>
+    <ticket id="ticket" style="display: none;">
         <ownerInfo>
             <p>Sr. Amigo's Name</p>
             <p><span class="boldText" id="ownerName">???</span></p>
@@ -66,6 +66,65 @@
 
 <script lang="javascript">
 
+var amigoName;
+var amigoType;
+var amigoSize;
+
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    amigoName = document.getElementById('amigo_name').value;
+
+    var amigoTypeDropdown = document.getElementById('amigo_type');
+    amigoType = amigoTypeDropdown.options[amigoTypeDropdown.selectedIndex].value;
+
+    var sizeInputs = document.getElementsByName('amigo_size');
+    for (var i = 0; i < sizeInputs.length; i++) {
+        if (sizeInputs[i].checked) {
+            amigoSize = sizeInputs[i].value;
+            break;
+        }
+    }
+
+    console.log('Captured Amigo Name:', amigoName);
+    console.log('Captured Amigo Type:', amigoType);
+    console.log('Captured Amigo Size:', amigoSize);
+
+    var amigoNameElement = document.getElementById('amigoName');
+    amigoNameElement.innerText = amigoName;
+
+    var amigoPictureElement = document.getElementById('amigoPicture');
+
+    var imageSrc = `./images/${amigoType}_${amigoSize}.png`;
+
+    amigoPictureElement.src = imageSrc;
+
+    var formElement = document.getElementById('form');
+
+    formElement.style.display = 'none';
+
+    alert('Ticket can now be printed!');
+});
+
+    function printTicket() {
+        var ticketElement = document.getElementById('ticket');
+
+        var amigoName = document.getElementById('amigoName').innerText;
+
+        var amigoType = document.getElementById('amigo_type').value;
+        var amigoSize = document.querySelector('input[name="amigo_size"]:checked').value;
+
+        var imageSource = './images/' + amigoPicture + '_' + amigoSize + '.png';
+
+        if (ticketElement.style.display === 'none') {
+            ticketElement.style.display = 'block';
+        } else {
+            ticketElement.style.display = 'none';
+        }
+}
+
+
+    amigoName = document.getElementById('amigo_name').value;
     var name = window.prompt('Enter your first name');
     var date = window.prompt('Enter the date you want to visit');
     document.title = `${name}'s Ticket to Animal Amigos`;
@@ -77,5 +136,4 @@
     }
 
 </script>
-
 </html>
