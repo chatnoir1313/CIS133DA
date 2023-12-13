@@ -1,0 +1,91 @@
+/* grid template, 1 colums, 3 rows */
+body{
+    margin: 0px;
+    background-color: #FBFAF5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 15%, auto;
+    grid-template-rows: 200px auto 150px;
+    grid-template-areas: "logo logo" "nav nav" "main main" "ftr ftr";
+    align-content: stretch;
+}
+/* top section - logo  */
+logo{
+    padding: 20px;
+    place-content: center;
+}
+
+logo{
+    grid-area: logo logo;
+    /* grid-column: 1/2; */
+    /* grid-row: 1; */
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(215, 27, 159, 0.403);
+}
+/* left side section - navigation */
+nav{
+    padding: 10px;
+    padding-top: 50px;
+    grid-area: nav;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+    /* grid-column: 1; */
+    /* grid-row: 2 / 3; */
+}
+
+nav ul{
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+} 
+
+nav li{
+    font-size: 1.5em;
+    list-style-type: none;
+    text-decoration: none;
+    /* display: inline; */
+}
+
+nav a:visited{
+    color: purple;
+}
+
+nav a:link{
+    color: rgb(215, 27, 159);
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: purple;
+}
+/* main section - webpage content */
+main{
+    grid-area: main;
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    background-color: #FBFAF5;
+    height: 100vh;
+    justify-items: center;
+    align-items: space-around;
+    text-align: center;
+}
+
+#storefront{
+    height: 300px;
+    width: 600px;
+    float: top;
+}
+/* footer section - store hours and contact */
+footer{
+    grid-area: ftr ftr;
+    grid-column: 2;
+    grid-row: 3;
+}
