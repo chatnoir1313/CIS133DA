@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natalia's Sweet Bakery - Treats</title>
+    <link rel="stylesheet" href="bakery.css" />
+    <!-- link stylesheet -->
+</head>
+<body>
+
+    <logo>
+        <img src="./images/Natalia's Sweet Bakery - Sitka Banner.jpg">
+    </logo>
+
+    <nav>
+        <ul><li><a href="1index.html">Home</a></li></ul>
+        <ul><li><a href="2treats.html">Treats</a></li></ul>
+        <ul><li><a href="3custom_orders.html">Custom Order</a></li></ul>
+        <ul><li><a href="5about_me.html">Meet the Owner</a></li></ul>
+    </nav>
+
+    <main>
+
+        <header>Order Form</header>
+
+        <div id="Form">
+            <form id="submitOrder" action="submit_order.php" method="post" enctype="multipart/form-data">
+
+                <table id="orderForm">
+                    <tr>
+                        <td>
+                            <input type="text" id="first_name" name="first_name" tabindex="1" placeholder="First Name" autofocus required style="width: 387px; height: 25px;" />
+                        </td>
+                        <td>
+                            <input type="text" id="last_name" name="last_name" tabindex="2" placeholder="Last Name" required style="width: 387px; height: 25px;" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input type="email" id="email" name="email" tabindex="3" placeholder="Email Address" required style="width: 800px; height: 25px;" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input type="number" id="phone_number" name="phone_number" tabindex="4" placeholder="Phone Number" maxlength="10" required style="width: 800px; height: 25px;" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">Type:
+                            <input type="radio" id="type_Custom" name="Order_type" value="Custom" tabindex="5" required />
+                            <label for="type_Custom">Custom</label>
+
+                            <input type="radio" id="type_Character" name="Order_type" value="Character" tabindex="6" required />
+                            <label for="type_Character">Character</label>
+
+                            <input type="radio" id="type_Money" name="Order_type" value="Money" tabindex="7" required />
+                            <label for="type_Money">Money Cake</label>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <textarea type="text" id="details" name="details" tabindex="8" placeholder="Additional Details" maxlength="450" required style="width: 800px; height: 300px;" ></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </main>
+
+
+
+    <footer>
+
+        <div class="footer-content" id="store_hours">
+            Store hours:
+            M-F: 7am - 7pm
+            Saturday: 7am - 2pm
+            Sunday: closed
+        </div>
+
+        <address class="footer-content">
+            100 Main Street
+            Scottsdale, AZ 85251
+        </address>
+            
+        <div class="footer-content" id="phone_number">
+            602-777-1234
+        </div>
+    </footer>
+</body>
+</html>
