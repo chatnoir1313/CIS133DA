@@ -4,7 +4,7 @@ body{
     background-color: rgba(255, 255, 255, 0.808);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: grid;
-    grid-template-rows: 200px 80px auto 80px;
+    grid-template-rows: 1fr 0.5fr minmax(auto 2fr) 0.4fr;
     grid-template-areas: "logo" "nav" "main" "ftr";
     align-content: stretch;
 }
@@ -22,6 +22,11 @@ logo{
     height: 100%;
     /* width: auto; */
     background-color: rgba(215, 27, 159, 0.403);
+}
+
+#logoBanner{
+    height: 80%;
+    margin: auto;
 }
 /* navigation */
 nav{
@@ -41,7 +46,7 @@ nav li{
     list-style-type: none;
     text-decoration: none;
     padding: 0.3em 2.3em;
-    /* padding is used here for space in between the li elements */
+    /* padding is used here for space in between the list elements */
 }
 
 nav a:active{
@@ -61,10 +66,12 @@ nav a:hover{
 main{
     grid-area: main;
     grid-row-start: 3;
+    grid-row-end: 4;
     font-size: 1.2em;
     box-sizing: border-box;
     /* background-color: #FBFAF5; */
     height: 100vh;
+    min-height: 0;
     justify-items: center;
     align-items: space-around;
     text-align: center;
@@ -152,6 +159,7 @@ button{
     width: 200px;
     border-radius: 12px;
     margin-top: 5em;
+    margin-bottom: 5em;
     color: white;
 }
 
@@ -187,16 +195,19 @@ header{
 
 #Natalia{
     padding-top: 5em;
+    padding-bottom: 5em;
 }
+
 /* footer area */
 footer{
     grid-area: ftr;
-    grid-row-start: 4;
+    grid-row-start: 5;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: left center right;
     position: fixed;
     bottom: 0;
+    height: auto;
     width: 100%;
     padding: 10px;
     font-size: 1em;
@@ -220,35 +231,41 @@ address{
     grid-template-areas: right;
 }
 /* media querries */
-@media (max-width: 600px) {
+@media (max-width: 600px){
+    nav, logo{
+        height: 95%;
+        width: auto;
+    }
+
+    #logoBanner{
+        height: 80%;
+        width: 75%;
+    }
+
     nav ul {
-      flex-flow: row nowrap;
-      justify-content: space-around;
-      text-align: center;
-      padding-right: 2em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        text-align: center;
+        padding: 0;
     }
   
     nav li {
         display: inline-block;
         border: none;
-        width: 12em;
-        }
+        width: auto;
+        font-size: 1.2em;
+        padding: 0;
+    }
     
-    main{
-        float: left;
+    #enjoy, #welcome{
+       font-size: 1em;
+        height: auto;
+        width: 12em;
     }
 
-    footer{
-        clear: both;
-    }
-
-    #Form {
-        width: 30%;
-        height: 50%;
-        display: grid;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
+    #storefront, #cupcake_display{
+        height: auto;
+        width: 15em;
     }
 }
